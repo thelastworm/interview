@@ -2,6 +2,8 @@
 backend/target/
 # Frontend
 frontend/node_modules/
+# Backend Node
+backend-node/node_modules/
 frontend/dist/
 frontend/.angular/
 # IDE
