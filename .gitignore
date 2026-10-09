@@ -9,3 +9,6 @@ frontend/.angular/
 .vscode/
 *.iml
 .DS_Store
+# Exports locaux
+*.bundle
+velogestion.zip
