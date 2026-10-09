@@ -1,0 +1,84 @@
+:root {
+  --bleu: #1f4e79;
+  --bleu-clair: #e8f0f8;
+  --vert: #2e7d32;
+  --rouge: #c62828;
+  --orange: #ef6c00;
+  --gris: #6b7280;
+  --bord: #d9dee5;
+  --fond: #f4f6f9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--fond);
+  color: #1f2937;
+  font-size: 14px;
+}
+
+h1 { font-size: 22px; margin: 0 0 16px; }
+h2 { font-size: 17px; margin: 0 0 12px; }
+
+.carte {
+  background: #fff;
+  border: 1px solid var(--bord);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--bord); vertical-align: top; }
+th { background: var(--bleu-clair); font-weight: 600; }
+td.num, th.num { text-align: right; }
+
+input, select, textarea {
+  padding: 7px 9px;
+  border: 1px solid var(--bord);
+  border-radius: 6px;
+  font: inherit;
+  background: #fff;
+}
+
+label { display: flex; flex-direction: column; gap: 4px; font-weight: 500; }
+
+.ligne-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 12px; }
+
+button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  background: var(--bleu);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.secondaire { background: #fff; color: var(--bleu); border: 1px solid var(--bleu); }
+button.danger { background: var(--rouge); }
+button.succes { background: var(--vert); }
+button.petit { padding: 3px 9px; font-size: 13px; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e5e7eb;
+}
+.badge.vert { background: #dcfce7; color: var(--vert); }
+.badge.rouge { background: #fee2e2; color: var(--rouge); }
+.badge.orange { background: #ffedd5; color: var(--orange); }
+.badge.bleu { background: var(--bleu-clair); color: var(--bleu); }
+
+.erreur { background: #fee2e2; color: var(--rouge); padding: 10px 12px; border-radius: 6px; margin-bottom: 12px; }
+.info { background: #dcfce7; color: var(--vert); padding: 10px 12px; border-radius: 6px; margin-bottom: 12px; }
+.muet { color: var(--gris); }
+
+.onglets { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 2px solid var(--bord); }
+.onglets button { background: none; color: var(--gris); border-radius: 6px 6px 0 0; }
+.onglets button.actif { background: var(--bleu); color: #fff; }
